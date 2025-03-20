@@ -5,7 +5,7 @@
     license = { text = "MIT" }
     authors = [{ name = "Mike Foster" }]
     dynamic = ["version"]
-    requires-python = ">=3.9"
+    requires-python = ">=3.12"
     classifiers = [
         "Programming Language :: Python :: 3",
         "Programming Language :: Rust",
@@ -14,9 +14,6 @@
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Intended Audience :: Developers",
         "Natural Language :: English",
-    ]
-    dependencies = [
-        "typing-extensions; python_version < '3.11'",
     ]
 
 [project.urls]
@@ -48,12 +45,12 @@
     typing = [
         {include-group = "test"},
         "pytype; python_version <= '3.12'",
-        "typing_extensions", # required for Python3.10 and below
     ]
     test = [
         "ipytest",
         "pytest",
         "pytest-doctest-mkdocstrings",
+        "pytest-ipynb2",
         ]
     cov = [
         {include-group = "test"},
