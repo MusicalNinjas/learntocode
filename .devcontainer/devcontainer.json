@@ -19,6 +19,7 @@
                 "charliermarsh.ruff",
                 // jupyter notebook
                 "ms-toolsai.jupyter",
+                "donjayamanne.vscode-default-python-kernel",
                 // configs, docs, etc.
                 "DavidAnson.vscode-markdownlint",
                 "tamasfe.even-better-toml"
