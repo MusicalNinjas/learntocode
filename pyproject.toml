@@ -95,6 +95,7 @@ inputs = ["learntocode"]
     line-length = 120
     format.skip-magic-trailing-comma = false
     format.quote-style = "double"
+    exclude = [".ipython/**"]
 
 [tool.ruff.lint]
     select = ["ALL"]
