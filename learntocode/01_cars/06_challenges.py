@@ -2,8 +2,11 @@
 
 # A swiss speed camera, looking at lots of cars...
 
-def swiss_speedcamera(speeds: list[int], units: str) -> str:
-    ...
+def swiss_speedcamera(speeds: list[int], units: str) -> list[str]:
+    speedlimit = 120
+    if units == "mph":
+        speedlimit = 74
+    return ["NAUGHTY" if speed > speedlimit else "OK" for speed in speeds]
 
 def test_speedcamera_list():
     speeds = [1,119,120,121,200]
