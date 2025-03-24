@@ -73,6 +73,7 @@
         "--doctest-glob=*.md",
     ]
     testpaths = ["tests", "learntocode"]
+    python_files = ["*.py"]
 
 [tool.coverage.run]
     branch = true
@@ -122,6 +123,11 @@ inputs = ["learntocode"]
         "D413",   # Missing blank line after last section (Not required)
         "TD",     # TODOs don't need to include github issue etc. until merging to `main`
         "FIX002", # TODOs are fine in general
+
+        "ANN201", # Don't need type annotations in learn to code
+        "D103",   # No need for docstrings when learning to code
+        "S101",   # `assert` is OK - we are mixing tests and code for now ...
+        "INP001", # NBot packaging, so no need for __init__.py
     ]
     extend-select = [
         "TD005",  # TODOs need a description, even outside of `main`
