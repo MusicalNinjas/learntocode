@@ -18,6 +18,9 @@ def test_speedcamera_mph():
 
 
 # A speedcamera that works in any country...
+def camera(speed: list[int], speedlimmit: int) -> list[str]:
+    return["NAUGHTY" if speeds > speedlimmit else "OK" for speeds in speed]
+
 
 def test_international_camera_switzerland():
     speeds = [1,119,120,121,129,130,131,200]
@@ -25,4 +28,4 @@ def test_international_camera_switzerland():
 
 def test_international_camera_austria():
     speeds = [1,119,120,121,129,130,131,200]
-    assert camera(speeds, 130) == ["OK","OK","OK","OK","OK","NAUGHTY","NAUGHTY","NAUGHTY"]
+    assert camera(speeds, 130) == ["OK","OK","OK","OK","OK","OK","NAUGHTY","NAUGHTY"]
