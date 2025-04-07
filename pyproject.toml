@@ -165,4 +165,5 @@ inputs = ["learntocode"]
         "S101", # Use of `assert`
         "T201", # Allow `print` in Jupyter notebooks (although `display` is better)
         "PLR2004", # Magic numbers are OK in workbooks
+        "F811", # OK to reassign variables (across cells) in notebooks
     ]
